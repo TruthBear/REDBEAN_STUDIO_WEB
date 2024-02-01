@@ -8,41 +8,182 @@
 </head>
 <body>
   <header>
-    <!-- 로고 -->
-    <div>
-      <div>LOGO</div>
+    <div class="header-content p-x">
+      <!-- 로고 -->
+      <div>
+        <div>LOGO</div>
+      </div>
+      <!--헤더 네비게이션 -->
+      <nav>
+        <!-- 메뉴 목록 -->
+        <ul>
+          <li><div>games</div></li>
+          <li><div>studio life</div></li>
+          <li><div>careers</div></li>
+          <li><div>seoul</div></li>
+        </ul>
+        <div class="hamburger-btn">
+
+        </div>
+      </nav>
     </div>
-    <!--네비게이션 -->
-    <nav>
-      <!-- 메뉴 목록 -->
-      <ul>
-        <li><div>games</div></li>
-        <li><div>studio life</div></li>
-        <li><div>careers</div></li>
-        <li><div>seoul</div></li>
-      </ul>
-      <!-- 햄버거 버튼 -->
-      <button>
-        버튼
-      </button>
-    </nav>
   </header>
   <main class="content-wrap">
+    <!-- overview 페이지 -->
     <section class="overview">
-      <div class="title">
-        <h1>redbean studio</h1>
-      </div>
-      <div class="overview-bottom">
-        <div class="scroll-down">
-          <span>icon</span>
-          <span>scroll down</span>
+      <div class="overview-content p-x">
+        <div class="title">
+          <h1 class="font-3xl">redbean studio</h1>
         </div>
-        <div class="video-stop">
+        <div class="overview-bottom">
+          <div class="scroll-down">
+            <span>icon</span>
+            <span>scroll down</span>
+          </div>
+          <div class="video-stop">
+            <div>icon</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="intro">
+      <div class="intro-content font-2xl p-x p-y">
+        <p>우리는 전 세계 플레이어에게 영감을 주기 위해 액션게임을 재정의 하여 게임 혁명을 개척하고 있습니다.</p>
+        <p>우리의 몰입형 경험은 깊은 울림을 주어 비교할 수 없는 마음과 정신을 사로잡습니다.</p>
+      </div>
+    </section>
+    <!-- news 페이지 -->
+    <section class="news">
+      <div class="news-content p-x p-y">
+        <h2 class="font-2xl">news</h2>
+        <ul class="news-list">
+          <li class="news-item">
+            <div class="news-card">
+              <div class="news-card-img">
+                <img src="./images/jones.jpg" alt="">
+              </div>
+              <div class="news-card-title">
+                <div>jan 9, 2024</div>
+                <span class="font-l">Indiana Jones and the Great Circle™ Gameplay Reveal </span>
+              </div>
+            </div>
+          </li>
+          <li class="news-item">
+            <div class="news-card">
+              <div class="news-card-img">
+                <img src="./images/jones.jpg" alt="">
+              </div>
+              <div class="news-card-title">
+                <div>jan 9, 2024</div>
+                <span class="font-l">Indiana Jones and the Great Circle™ Gameplay Reveal </span>
+              </div>
+            </div>
+          </li>
+          <li class="news-item">
+            <div class="news-card">
+              <div class="news-card-img">
+                <img src="./images/jones.jpg" alt="">
+              </div>
+              <div class="news-card-title">
+                <div>jan 9, 2024</div>
+                <span class="font-l">Indiana Jones and the Great Circle™ Gameplay Reveal </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- games 페이지 -->
+    <section class="games">
+      <div class="games-content p-y p-x">
+        <h2 class="font-2xl">games</h2>
+        <ul class="game-list">
+          <li class="game-item">
+            <div class="game-card">
+              <div class="game-card-img">
+                <img src="./images/jones.jpg" alt="">
+              </div>
+              <div class="game-card-title">
+                indiana jones and the greate circle
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- about 페이지 -->
+    <section class="about">
+      <div class="about-content p-y p-x">
+        <h2 class="font-2xl">life at <br> redbean studio</h2>
+        <div>
+          <p class="font-l">우리는 먼저 우리 팀을 지원하고 믿습니다. 우리는 지구의 모든 곳에서 가장 재능 있는 개인들을 모아 창의적 자유, 소유권 및 책임감을 부여하여 그들이 평생 최고의 일을 할 수 있도록 돕습니다.</p>
+        </div>
+        <ul class="img-list">
+          <li class="img-item">
+            <div>
+              <img src="" alt="">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- 커리어 페이지 -->
+    <section class="career">
+      <div class="career-content p-x p-y">
+        <div>
+          <p class="font-xl">now hiring(8 jobs)</p>
+        </div>
+        <div>
+          <h2 class="font-3xl">Lead Sound Designer</h2>
+        </div>
+        <div class="button">
           <div>icon</div>
+          <div>JOIN</div>
         </div>
       </div>
     </section>
   </main>
+  <footer>
+    <div class="footer-content p-y p-x">
+      <div class="logo">
+        LOGO
+      </div>
+      <nav>
+        <ul class="menu-list font-3xl">
+          <li class="menu-item">games</li>
+          <li class="menu-item">studio life</li>
+          <li class="menu-item">careers</li>
+          <li class="menu-item">seoul</li>
+        </ul>
+      </nav>
+      
+      <ul class="sns-link-list">
+        <li class="sns-link-item">
+          <a href="#">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M45.3731 0H2.64467C1.1874 0 0 1.18652 0 2.6427V45.3213C0 46.7775 1.1874 47.964 2.64467 47.964H25.6371V29.3933H19.3762V22.1483H25.6371V16.827C25.6371 10.6247 29.4332 7.26292 34.9564 7.26292C37.601 7.26292 39.8859 7.46067 40.5516 7.55056V14.0225H36.7195C33.715 14.0225 33.1213 15.4427 33.1213 17.5461V22.1663H40.2997L39.3642 29.4112H33.1213V48H45.3551C46.8124 48 47.9998 46.8135 47.9998 45.3573V2.6427C48.0178 1.18652 46.8304 0 45.3731 0Z" fill="white"></path></svg>
+          </a>
+        </li>
+        <li class="sns-link-item">
+          <a href="#">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="4" fill="white"></rect><path d="M32.6533 11H37.064L27.428 22.0133L38.764 37H29.888L22.936 27.9107L14.9813 37H10.568L20.8747 25.22L10 11H19.1013L25.3853 19.308L32.6533 11ZM31.1053 34.36H33.5493L17.7733 13.5013H15.1507L31.1053 34.36Z" fill="black"></path></svg>
+          </a>
+        </li>
+        <li class="sns-link-item">
+          <a href="#">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M40.8977 40.8977H33.7756V29.7509C33.7756 27.0875 33.7361 23.6745 30.0666 23.6745C26.3576 23.6745 25.8052 26.5746 25.8052 29.5536V40.8779H18.7028V17.9926H25.529V21.1295H25.6276C26.5746 19.3342 28.9026 17.4205 32.3551 17.4205C39.5758 17.4205 40.8977 22.1554 40.8977 28.3305V40.8977ZM10.6732 14.8755C8.38471 14.8755 6.53021 13.021 6.53021 10.7522C6.53021 8.46362 8.38471 6.62885 10.6732 6.62885C12.942 6.62885 14.7965 8.48335 14.7965 10.7522C14.7965 13.021 12.9618 14.8755 10.6732 14.8755ZM14.2441 40.8977H7.10234V17.9926H14.2244V40.8977H14.2441ZM44.4488 0H3.53144C1.5783 0 0 1.55857 0 3.45253V44.5277C0 46.4414 1.5783 48 3.53144 48H44.4488C46.402 48 48 46.4414 48 44.5277V3.45253C48 1.55857 46.402 0 44.4488 0Z" fill="white"></path></svg>
+          </a>
+        </li>
+      </ul>
+      <div>
+        <p>@copyright 2024 redbean inc.</p>
+      </div>
+      <div>
+        <p>terms</p>
+        <p>privacy ploicy</p>
+        <p>concat</p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
