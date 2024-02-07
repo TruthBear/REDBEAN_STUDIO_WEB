@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="./JS/data.js" defer></script>
+  <script src="./JS/mouseScroll.js" defer></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <header style="display: none;">
     <div class="header-content p-x">
       <!-- 로고 -->
       <div>
@@ -23,27 +25,26 @@
           <li><div>seoul</div></li>
         </ul>
         <div class="hamburger-btn">
-
         </div>
       </nav>
     </div>
   </header>
+  
   <div class="bg-wrap">
     <main class="content-wrap">
       <!-- overview 페이지 -->
       <section class="overview">
-        <div class="overview-content p-x">
-          <div class="title">
-            <h1 class="font-3xl">redbean studio</h1>
+        <div class="overview-content">
+          <div class="overview-title">
+            <div class="overview-title-wrap">
+              <h1 class="font-3xl">redbean studio</h1>
+              <div>scroll down</div>
+            </div>
           </div>
-          <div class="overview-bottom">
-            <div class="scroll-down">
-              <span>icon</span>
-              <span>scroll down</span>
-            </div>
-            <div class="video-stop">
-              <div>icon</div>
-            </div>
+          <div class="overview-bg">
+            <video muted autoplay playsinline loop>
+              <source src="./asset/video/overview.webm" type="video/webm">
+            </video>
           </div>
         </div>
       </section>
@@ -55,77 +56,59 @@
       </section>
       <!-- news 페이지 -->
       <section class="news">
-        <div class="news-content p-x p-y">
+        <div class="news-content p-y">
           <h2 class="font-2xl">news</h2>
-          <ul class="news-list">
-            <li class="news-item">
-              <div class="news-card">
-                <div class="news-card-img">
-                  <img src="./images/jones.jpg" alt="">
+          <div class="news-list-wrap p-right">
+            <ul class="news-list ">
+              <!-- news item 예시 -->
+              <!-- <li class="news-item">
+                <div class="news-card">
+                  <div class="news-card-img">
+                    <img src="./asset/images/jones.jpg" alt="">
+                  </div>
+                  <div class="news-card-title">
+                    <div>jan 9, 2024</div>
+                    <span class="font-l">Indiana Jones and the Great Circle™ Gameplay Reveal </span>
+                  </div>
                 </div>
-                <div class="news-card-title">
-                  <div>jan 9, 2024</div>
-                  <span class="font-l">Indiana Jones and the Great Circle™ Gameplay Reveal </span>
-                </div>
-              </div>
-            </li>
-            <li class="news-item">
-              <div class="news-card">
-                <div class="news-card-img">
-                  <img src="./images/jones.jpg" alt="">
-                </div>
-                <div class="news-card-title">
-                  <div>jan 9, 2024</div>
-                  <span class="font-l">Indiana Jones and the Great Circle™ Gameplay Reveal </span>
-                </div>
-              </div>
-            </li>
-            <li class="news-item">
-              <div class="news-card">
-                <div class="news-card-img">
-                  <img src="./images/jones.jpg" alt="">
-                </div>
-                <div class="news-card-title">
-                  <div>jan 9, 2024</div>
-                  <span class="font-l">Indiana Jones and the Great Circle™ Gameplay Reveal </span>
-                </div>
-              </div>
-            </li>
-          </ul>
+              </li> -->
+            </ul>
+          </div>
         </div>
       </section>
       <!-- games 페이지 -->
       <section class="games">
-        <div class="games-content p-y p-x">
+        <div class="games-content p-y ">
           <h2 class="font-2xl">games</h2>
-          <ul class="game-list">
-            <li class="game-item">
-              <div class="game-card">
-                <div class="game-card-img">
-                  <img src="./images/jones.jpg" alt="">
+          <div class="game-list-wrap p-right">
+            <ul class="game-list">
+              <!-- game-item 예시 -->
+              <!-- <li class="game-item">
+                <div class="game-card">
+                  <div class="game-card-img">
+                    <img src="./asset/images/cover-prototype.png" alt="">
+                  </div>
+                  <div class="game-card-title">
+                    indiana jones and the greate circle
+                  </div>
                 </div>
-                <div class="game-card-title">
-                  indiana jones and the greate circle
-                </div>
-              </div>
-            </li>
-          </ul>
+              </li> -->
+            </ul>
+          </div>
         </div>
       </section>
       <!-- about 페이지 -->
       <section class="about">
         <div class="about-content p-y p-x">
-          <h2 class="font-2xl">life at <br> redbean studio</h2>
-          <div>
-            <p class="font-l">우리는 먼저 우리 팀을 지원하고 믿습니다. 우리는 지구의 모든 곳에서 가장 재능 있는 개인들을 모아 창의적 자유, 소유권 및 책임감을 부여하여 그들이 평생 최고의 일을 할 수 있도록 돕습니다.</p>
-          </div>
-          <ul class="img-list">
-            <li class="img-item">
+          <div class="about-text">
+            <h2 class="font-2xl">life at <br> redbean studio</h2>
+            <div>
               <div>
-                <img src="" alt="">
+                <p class="font-xl">우리는 먼저 우리 팀을 지원하고 믿습니다. 우리는 지구의 모든 곳에서 가장 재능 있는 개인들을 모아 창의적 자유, 소유권 및 책임감을 부여하여 그들이 평생 최고의 일을 할 수 있도록 돕습니다</p>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
+          <ul class="about-list"></ul>
         </div>
       </section>
       <!-- 커리어 페이지 -->
@@ -135,13 +118,29 @@
             <p class="font-xl">now hiring(8 jobs)</p>
           </div>
           <div>
-            <h2 class="font-3xl">Lead Sound Designer</h2>
+            <h2 class="font-2xl">Lead Sound Designer</h2>
           </div>
           <div class="button">
             <div>icon</div>
             <div>JOIN</div>
           </div>
+          
         </div>
+        <div class="career-bg">
+          <img src="./asset/images/career.jpeg" alt="">
+        </div>
+        <!-- <div class="career-content p-x p-y">
+          <div>
+            <p class="font-xl">now hiring(8 jobs)</p>
+          </div>
+          <div>
+            <h2 class="font-2xl">Lead Sound Designer</h2>
+          </div>
+          <div class="button">
+            <div>icon</div>
+            <div>JOIN</div>
+          </div>
+        </div> -->
       </section>
     </main>
     <footer>
@@ -150,7 +149,7 @@
           LOGO
         </div>
         <nav>
-          <ul class="menu-list font-3xl">
+          <ul class="menu-list font-2xl">
             <li class="menu-item">games</li>
             <li class="menu-item">studio life</li>
             <li class="menu-item">careers</li>
