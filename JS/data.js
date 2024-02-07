@@ -81,37 +81,11 @@ gameData.map(item => paintGameList(item));
 // about페이지 이미지 출력
 aboutData.map(item => paintAboutList(item))
 
-// 게임페이지 목록 출력 함수
-function paintGameList(obj) {
-  const gameItem = document.createElement('li');
-  gameItem.classList.add('game-item');
-
-  const gameCard = document.createElement('div');
-  gameCard.classList.add('game-card');
-  
-  const gameCardImg = document.createElement('div');
-  gameCardImg.classList.add('game-card-img');
-
-  const img = document.createElement('img');
-  img.setAttribute("src", obj.image);
-
-  const gameCardTitle = document.createElement('div');
-  gameCardTitle.classList.add('game-card-title');
-  gameCardTitle.innerText = obj.title;
-  
-  gameCardImg.appendChild(img);
-  gameCardImg.appendChild(gameCardTitle);
-  
-  gameCard.appendChild(gameCardImg);
-  gameItem.appendChild(gameCard);
-
-  gameList.appendChild(gameItem);
-}
-
 // 뉴스페이지 목록 출력 함수
 function paintNewsList(obj) {
   const newsItem = document.createElement('li');
   newsItem.classList.add('news-item');
+  newsItem.classList.add('pop-before-card');
 
   const newsCard = document.createElement('div');
   newsCard.classList.add('news-card');
@@ -145,6 +119,36 @@ function paintNewsList(obj) {
   newsList.appendChild(newsItem);
 }
 
+// 게임페이지 목록 출력 함수
+function paintGameList(obj) {
+  const gameItem = document.createElement('li');
+  gameItem.classList.add('game-item');
+  gameItem.classList.add('pop-before-card');
+
+
+  const gameCard = document.createElement('div');
+  gameCard.classList.add('game-card');
+  
+  const gameCardImg = document.createElement('div');
+  gameCardImg.classList.add('game-card-img');
+
+  const img = document.createElement('img');
+  img.setAttribute("src", obj.image);
+
+  const gameCardTitle = document.createElement('div');
+  gameCardTitle.classList.add('game-card-title');
+  gameCardTitle.innerText = obj.title;
+  
+  gameCardImg.appendChild(img);
+  gameCardImg.appendChild(gameCardTitle);
+  
+  gameCard.appendChild(gameCardImg);
+  gameItem.appendChild(gameCard);
+
+  gameList.appendChild(gameItem);
+}
+
+// about 페이지 이미지 출력 함수
 function paintAboutList(obj) {
   const aboutItem = document.createElement('li');
   aboutItem.classList.add('about-item');

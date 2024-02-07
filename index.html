@@ -4,15 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="./JS/show.js" defer></script>
   <script src="./JS/data.js" defer></script>
-  <script src="./JS/mouseScroll.js" defer></script>
   <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-  <header style="display: none;">
+  <header>
     <div class="header-content p-x">
       <!-- 로고 -->
-      <div>
+      <div class="logo-wrap">
         <div>LOGO</div>
       </div>
       <!--헤더 네비게이션 -->
@@ -37,7 +38,10 @@
         <div class="overview-content">
           <div class="overview-title">
             <div class="overview-title-wrap">
-              <h1 class="font-3xl">redbean studio</h1>
+              <h1 class="font-3xl">
+                <div class="pop-wrap"><div class="pop-before">redbean</div></div>
+                <div class="pop-wrap"><div class="pop-before">studio</div></div>
+              </h1>
               <div>scroll down</div>
             </div>
           </div>
@@ -50,8 +54,12 @@
       </section>
       <section class="intro">
         <div class="intro-content font-2xl p-x p-y">
-          <p>우리는 전 세계 플레이어에게 영감을 주기 위해 액션게임을 재정의 하여 게임 혁명을 개척하고 있습니다.</p>
-          <p>우리의 몰입형 경험은 깊은 울림을 주어 비교할 수 없는 마음과 정신을 사로잡습니다.</p>
+          <div class="pop-wrap"><p class="pop-before">우리는 전 세계 플레이어에게 영감을 주기 위해</p></div>
+          <div class="pop-wrap"><p class="pop-before">액션게임을 재정의 하여 게임혁명을 개척하고</p></div>
+          <div class="pop-wrap"><p class="pop-before">우리의 몰입형 경험은 싶은 울림을 주어</p></div>
+          <div class="pop-wrap"><p class="pop-before">비교할 수 없는 마음과 정신을 사로 잡습니다.</p></div>
+          <!-- <div class="pop-wrap"><p class="pop-before">우리는 전 세계 플레이어에게 영감을 주기 위해 액션게임을 재정의 하여 게임 혁명을 개척하고 있습니다.</p></div>
+          <div class="pop-wrap"><p class="pop-before">우리의 몰입형 경험은 깊은 울림을 주어 비교할 수 없는 마음과 정신을 사로잡습니다.</p></div> -->
         </div>
       </section>
       <!-- news 페이지 -->
@@ -104,8 +112,12 @@
             <h2 class="font-2xl">life at <br> redbean studio</h2>
             <div>
               <div>
-                <p class="font-xl">우리는 먼저 우리 팀을 지원하고 믿습니다. 우리는 지구의 모든 곳에서 가장 재능 있는 개인들을 모아 창의적 자유, 소유권 및 책임감을 부여하여 그들이 평생 최고의 일을 할 수 있도록 돕습니다</p>
-              </div>
+                <div class="about-pop-wrap"><p class="font-xl pop-before">우리는 먼저 우리팀을 지원하고 믿습니다.</p></div>
+                <div class="about-pop-wrap"><p class="font-xl pop-before">우리는 지구의 모든 곳에서 가장 재능 있는</p></div>
+                <div class="about-pop-wrap"><p class="font-xl pop-before">개인들을 모아 창의적 자유, 고슈권 및 책임</p></div>
+                <div class="about-pop-wrap"><p class="font-xl pop-before">감을 부여하여 그들이 평생 최고의 일을 할</p></div>
+                <div class="about-pop-wrap"><p class="font-xl pop-before">수 있도록 돕습니다.</p></div> 
+              </div> 
             </div>
           </div>
           <ul class="about-list"></ul>
@@ -185,6 +197,8 @@
       </div>
     </footer>
   </div>
+
+ 
 
 </body>
 </html>

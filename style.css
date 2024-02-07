@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'Gothic A1';
   src: url(./asset/font/GothicA1-Bold.ttf);
   unicode-range: U+1100-11FF, U+3130-318F, U+A960-A97F, U+AC00-D7A3, U+D7B0-D7FF;
@@ -7,13 +7,10 @@
 @font-face {
   font-family: "Futura";
   font-weight: bold;
-  src: url(./asset/font/Futura\ Bold\ font.ttf);
+  src: url(./asset/font/futur.ttf);
   unicode-range: U+0041-005A U+0061-007A U+0030-0039;
-}
+} */
 
-html {
-  scroll-behavior: smooth;
-}
 
 * {
   margin: 0;
@@ -70,6 +67,8 @@ header {
  padding-top: 30px;
 
  position: fixed;
+
+ z-index: 10;
 }
 
 .header-content {
@@ -78,7 +77,7 @@ header {
 }
 
 .header-content nav ul{
-  display: flex;
+  display: none;
 }
 
 .header-content nav ul > li {
@@ -93,6 +92,8 @@ header {
 
 
 /* 메인 */
+
+
 
 /* .bg-wrap {
   background: url(./images/spider.jpg);
@@ -136,7 +137,9 @@ header {
 }
 
 .overview-title h1 {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  line-height: 1;
+
 }
 
 .overview-bg {
@@ -205,8 +208,8 @@ header {
 .news-card {
   background: var(--color-black);
   margin-right: clamp(20px, 5vw, 100px);
-  width: clamp(300px, 25vw, 500px);
-  height: clamp(400px, 30vw, 600px);
+  width: clamp(300px, 25vw, 700px);
+  height: clamp(500px, 30vw, 600px);
   /* flex-shrink: 0; */
   
 }
@@ -469,11 +472,18 @@ header {
 
   .about-text > div {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
   }
 
   .about-text > div > div {
-    width: 50%;
+    width:50%;
+    flex-shrink: 1;
+    padding-left: clamp(50px, 5vw, 150px);
+  }
+
+  .about-pop-wrap {
+    display: block;
+    overflow: hidden;
   }
 
   .about-text p {
@@ -508,4 +518,35 @@ header {
     display: none;
   }
   
+}
+
+
+
+
+
+
+/* 애니메이션 css */
+.pop-wrap {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.pop-before {
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(0, 50%);
+  transition: opacity 0.3s, transform 1s;
+}
+
+.pop-before-card {
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(0, 20%);
+  transition: opacity 1s, transform 2s;
+}
+
+.pop-text {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(0 ,0%);
 }
