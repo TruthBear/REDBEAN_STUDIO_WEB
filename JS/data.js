@@ -15,7 +15,7 @@ const newsData = [
     date: "mar 22, 2015",
     image: "./asset/images/news-3.jpeg"
   },
-]
+];
 
 
 // 게임 데이터
@@ -67,19 +67,37 @@ const aboutData = [
   {
     image: "./asset/images/about-6.jpeg",
   },
-]
+];
+
+const jobsList = [
+  {
+    job: "Art Outsource Manager",
+  },
+  {
+    job: "Environment Artist",
+  },
+  {
+    job: "General Application",
+  },
+  {
+    job: "Lead Sound Designer",
+  },
+];
 
 const newsList = document.getElementsByClassName('news-list')[0];
 const gameList = document.getElementsByClassName('game-list')[0];
 const aboutList = document.getElementsByClassName('about-list')[0];
-
+const career = document.getElementsByClassName('jobs-list')[0];
 
 // 뉴스페이지 목록 출력
 newsData.map(item => paintNewsList(item));
 // 게임페이지 목록 출력
 gameData.map(item => paintGameList(item));
 // about페이지 이미지 출력
-aboutData.map(item => paintAboutList(item))
+aboutData.map(item => paintAboutList(item));
+// career 페이지 jobs-item 출력 함수
+// career.map(item => paintJobsList(item));
+jobsList.map(item => paintJobsList(item))
 
 // 뉴스페이지 목록 출력 함수
 function paintNewsList(obj) {
@@ -162,4 +180,21 @@ function paintAboutList(obj) {
   aboutImg.appendChild(img);
   aboutItem.appendChild(aboutImg);
   aboutList.appendChild(aboutItem);
+}
+
+// career 페이지 jobs-item 출력 함수
+function paintJobsList(obj) {
+  const jobsItem = document.createElement('li');
+  jobsItem.classList.add('jobs-item');
+
+  const jobWrap = document.createElement('h2');
+  jobWrap.classList.add('job-wrap');
+
+  const job = document.createElement('div');
+  job.classList.add('pop-before-job');
+  job.innerText = obj.job;
+
+  jobWrap.appendChild(job);
+  jobsItem.appendChild(jobWrap);
+  career.appendChild(jobsItem);
 }

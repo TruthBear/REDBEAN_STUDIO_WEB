@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="./JS/show.js" defer></script>
   <script src="./JS/data.js" defer></script>
+  <script src="./JS/show.js" defer></script>
+  <script src="./JS/carousel.js" defer></script>
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -14,18 +15,19 @@
     <div class="header-content p-x">
       <!-- 로고 -->
       <div class="logo-wrap">
-        <div>LOGO</div>
+        <div class="font-xl">logo</div>
       </div>
       <!--헤더 네비게이션 -->
       <nav>
         <!-- 메뉴 목록 -->
-        <ul>
-          <li><div>games</div></li>
-          <li><div>studio life</div></li>
-          <li><div>careers</div></li>
-          <li><div>seoul</div></li>
+        <ul class="header-list">
+          <li class="header-item"><div>games</div></li>
+          <li class="header-item"><div>studio life</div></li>
+          <li class="header-item"><div>careers</div></li>
+          <li class="header-item"><div>seoul</div></li>
         </ul>
         <div class="hamburger-btn">
+          <img src="./asset/svg/hamburgerMenu-button.svg" alt="">
         </div>
       </nav>
     </div>
@@ -42,7 +44,10 @@
                 <div class="pop-wrap"><div class="pop-before">redbean</div></div>
                 <div class="pop-wrap"><div class="pop-before">studio</div></div>
               </h1>
-              <div>scroll down</div>
+              <div style="padding-bottom: 10px;">scroll down</div>
+              <div class="drop">
+                <img src="asset/svg/down.svg" alt="">
+              </div>
             </div>
           </div>
           <div class="overview-bg">
@@ -103,6 +108,10 @@
               </li> -->
             </ul>
           </div>
+          <!-- <div class="btn-list p-x">
+            <button class="prev-btn">prev</button>
+            <button class="next-btn">next</button>
+          </div> -->
         </div>
       </section>
       <!-- about 페이지 -->
@@ -130,7 +139,8 @@
             <p class="font-xl">now hiring(8 jobs)</p>
           </div>
           <div>
-            <h2 class="font-2xl">Lead Sound Designer</h2>
+            <!-- 잡스 -->
+            <ul class="jobs-list font-2xl"></ul>
           </div>
           <div class="button">
             <div>icon</div>
@@ -157,8 +167,8 @@
     </main>
     <footer>
       <div class="footer-content p-y p-x">
-        <div class="logo">
-          LOGO
+        <div class="logo font-3xl">
+          rb studio
         </div>
         <nav>
           <ul class="menu-list font-2xl">
@@ -196,6 +206,8 @@
         </div>
       </div>
     </footer>
+
+    
   </div>
 
  

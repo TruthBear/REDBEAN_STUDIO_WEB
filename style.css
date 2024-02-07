@@ -20,6 +20,12 @@
 
 }
 
+html,
+body{
+width:100%;
+overflow-x:hidden;
+}
+
 body {
   /* 폰트 컬러 */
   --color-red: #ae2422;
@@ -28,6 +34,7 @@ body {
   --color-dark-gray : #1d1d1d;
 
   /* 뉴스 슬라이드 개수 */
+
   --news-silder: 1.2;
   --news-font: 30px;
 
@@ -76,18 +83,24 @@ header {
   justify-content: space-between;
 }
 
-.header-content nav ul{
+.logo-wrap {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.header-list{
   display: none;
+  opacity: 1;
+  transition: opacity 1s;
 }
 
 .header-content nav ul > li {
   margin-left: 60px;
 }
 
-.hamburger-btn {
-  background: none;
+.hamburger-btn img{
+  width: 50px;
 }
-
 
 
 
@@ -306,6 +319,17 @@ header {
 
 }
 
+.btn-list {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-list button {
+  width: ;
+}
+
 
 
 /* about 페이지 */
@@ -376,6 +400,16 @@ header {
   position: relative;
 }
 
+.career-content > *:nth-child(1) {
+  color: var(--color-red);
+  padding-bottom: 100px;
+}
+
+.career-content > *:nth-child(3) {
+  
+  padding-top: 300px;
+}
+
 .career-content > * {
   margin-bottom: clamp(100px, 10vw, 250px);
 }
@@ -383,6 +417,24 @@ header {
 .career-content > *:last-child {
   margin-bottom: 0px;
 }
+
+.jobs-list {
+  position: relative;
+}
+
+.jobs-item {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  align-items: center;
+  display: flex;
+}
+
+.job-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
 
 .career-bg {
   position: absolute;
@@ -457,6 +509,16 @@ header {
 }
 
 @media screen and (min-width: 1024px) {
+  
+  .hamburger-btn {
+    display: none;
+  }
+
+  .header-list{
+    display: flex;
+
+  }
+
   /* .about-text {
     flex-direction: row;
   }
@@ -498,6 +560,11 @@ header {
     position: relative;
     top: 5vw;
   }
+
+  .footer-content div:last-child {
+    width: 50%;
+  }
+
 }
 
 @media screen and (min-width: 1280px) {
@@ -545,8 +612,30 @@ header {
   transition: opacity 1s, transform 2s;
 }
 
+.pop-before-job {
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(0, 100%);
+  transition: opacity 1s, transform 1s;
+}
+
 .pop-text {
   visibility: visible;
   opacity: 1;
   transform: translate(0 ,0%);
 }
+
+.drop {
+  /* transform: translate(0, 10%); */
+  
+  animation-name: down-scroll;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes down-scroll {
+  0%{transform: translate(0, -10%);}
+  100%{transform: translate(0, 10%);}
+}
+
